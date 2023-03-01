@@ -14,7 +14,7 @@ For the solution of the occuring linear systems, the following methods are avail
 * Bi-conjugate gradient (including ITER in the .OPTIONS command)
 * Conjugate gradient (including ITER and SPD in the .OPTIONS command)
 
-For the last two methods which are iterative, it is also possible to define a tolerance threshold by including ITOL=<value> in the .OPTIONS command.
+For the last two methods which are iterative, it is also possible to define a tolerance threshold by including ITOL=[value] in the .OPTIONS command.
 
 There are implementations for a couple of additional methods for transient analysis, namely:
 * Trapezoidal (activated with METHOD=TR in the .OPTIONS command)
