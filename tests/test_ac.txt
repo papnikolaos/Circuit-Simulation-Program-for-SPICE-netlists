@@ -1,0 +1,38 @@
+* test
+v1 n5 0 2 EXP (2 5 1 0.2 2 0.5) AC 2 45
+v2 n3 n2 0.2 PULSE (0.2 1 1 0.1 0.4 0.5 2) AC 0.2 90
+v3 n7 n6 2
+i1 n4 n8 1e-3 SIN (1e-3 0.5 5 1 1 30) AC 1e-3 180
+i2 0 n6 1e-3 PWL (0 1e-3) (1.2 0.1) (1.4 1) (2 0.2) (3 0.4) AC 1e-3 270
+
+*try out comment
+R1 n1 n5 1.5
+R2 n1 n2 1
+R3 n5 n2 50
+R4 n5 n6 0.1
+R5 n2 n6 1.5
+R6 n3 n4 0.1
+R7 n8 0 1e3
+R8 n4 0 10
+L1 n3 n4 13
+L2 n2 n6 13
+L3 n5 n8  23
+L4 n1 n2 11
+L5 n2 n5 42
+C1 n2 n3 14
+C2 n1 n2 32
+C3 n2 0  31
+C4 n5 0  11
+C5 n1 n5 99
+C6 n5 n2 12
+
+.options iter itol=1e-4
+.ac lin 10 1 1e4
+.print v(n1)
+.print v(n2)
+.print v(n3)
+.print v(n4)
+.print V(n5)
+.print v(n6)
+.print v(n7)
+.print v(n8)
